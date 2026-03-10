@@ -11,7 +11,7 @@ export default function Navbar() {
 
                 <Link href="/" className="navbar-logo">
                     <Image
-                        src="/arkanya-logo.png"
+                        src="/icons/arkanya-logo.png"
                         alt="Arkanya logo"
                         width={120}
                         height={32}
