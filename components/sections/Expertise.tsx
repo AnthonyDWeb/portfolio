@@ -1,32 +1,42 @@
+import Container from "../ui/Container"
+import SectionTitle from "../ui/SectionTitle"
+import FeatureCard from "../ui/FeatureCard"
+
 export default function Expertise() {
     return (
-        <section id="expertise" className="py-24 px-6">
+        <section id="expertise" className="section">
 
-            <div className="max-w-6xl mx-auto">
+            <Container>
 
-                <h2 className="text-3xl font-semibold text-center mb-16">
+                <SectionTitle>
                     Expertise
-                </h2>
+                </SectionTitle>
 
-                <div className="grid md:grid-cols-4 gap-6">
+                <div className="grid md:grid-cols-4 gap-8 mt-12">
 
-                    {[
-                        "Développement Web",
-                        "Applications sur mesure",
-                        "Performance & Architecture",
-                        "Modernisation",
-                    ].map((item) => (
-                        <div
-                            key={item}
-                            className="p-8 bg-neutral-900 border border-neutral-800 rounded-xl text-center hover:border-[#00ff9c] transition"
-                        >
-                            {item}
-                        </div>
-                    ))}
+                    <FeatureCard
+                        title="Applications sur mesure"
+                        description="Un outil parfaitement adapté à votre activité."
+                    />
+
+                    <FeatureCard
+                        title="Architecture technique"
+                        description="Une base solide pour accompagner votre croissance."
+                    />
+
+                    <FeatureCard
+                        title="Performance"
+                        description="Des applications rapides et fiables."
+                    />
+
+                    <FeatureCard
+                        title="Modernisation"
+                        description="Transformez un système vieillissant en solution moderne."
+                    />
 
                 </div>
 
-            </div>
+            </Container>
 
         </section>
     )

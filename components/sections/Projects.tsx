@@ -1,47 +1,30 @@
-import Link from "next/link"
+import Container from "../ui/Container"
+import SectionTitle from "../ui/SectionTitle"
+import ProjectCard from "../ui/ProjectCard"
+import {projects} from "@/data/projects"
 
 export default function Projects() {
     return (
-        <section id="projects" className="py-24 px-6">
+        <section id="projects" className="section">
 
-            <div className="max-w-6xl mx-auto">
+            <Container>
 
-                <h2 className="text-3xl font-semibold text-center mb-16">
+                <SectionTitle>
                     Projets
-                </h2>
+                </SectionTitle>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-2 gap-10 mt-12">
 
-                    <Link
-                        href="https://arkanya.fr"
-                        className="p-10 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-[#00ff9c] transition"
-                    >
-                        <h3 className="text-xl font-semibold text-[#00ff9c]">
-                            Arkanya
-                        </h3>
-
-                        <p className="mt-4 text-neutral-400">
-                            Studio digital spécialisé dans la création de solutions web modernes.
-                        </p>
-
-                    </Link>
-
-                    <div
-                        className="p-10 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-[#00ff9c] transition">
-
-                        <h3 className="text-xl font-semibold text-[#00ff9c]">
-                            Les Services de Mathilde
-                        </h3>
-
-                        <p className="mt-4 text-neutral-400">
-                            Site vitrine pour une entreprise de services à la personne.
-                        </p>
-
-                    </div>
+                    {projects.map((project, index) => (
+                        <ProjectCard
+                            key={index}
+                            {...project}
+                        />
+                    ))}
 
                 </div>
 
-            </div>
+            </Container>
 
         </section>
     )
