@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import {useEffect, useState} from "react"
 import {EllipsisVertical} from "lucide-react"
+import ExternalLink from "@/components/ui/ExternalLink";
 
 export default function Navbar() {
 
@@ -18,14 +19,18 @@ export default function Navbar() {
         }
 
         const handleScroll = () => {
-            setScrolled(window.scrollY > 10)
+            const scrollTop =
+                document.documentElement.scrollTop ||
+                document.body.scrollTop
+
+            setScrolled(scrollTop > 10)
         }
 
         handleResize()
         handleScroll()
 
         window.addEventListener("resize", handleResize)
-        window.addEventListener("scroll", handleScroll)
+        window.addEventListener("scroll", handleScroll, {passive: true})
 
         return () => {
             window.removeEventListener("resize", handleResize)
@@ -49,15 +54,15 @@ export default function Navbar() {
 
                 {/* LOGO */}
 
-                <Link href="/" className="navbar-logo">
+                <ExternalLink href="https://arkanya.fr" className="navbar-logo">
                     <Image
                         src="/icons/arkanya-logo.png"
                         alt="Arkanya logo"
-                        width={120}
-                        height={32}
+                        width={50}
+                        height={50}
                         priority
                     />
-                </Link>
+                </ExternalLink>
 
                 {/* DESKTOP MENU */}
 

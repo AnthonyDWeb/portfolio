@@ -20,14 +20,13 @@
 
 .navbar-logo {
     @apply flex items-center cursor-pointer;
+    position: sticky;
+    left: 10px;
+    top: 0px;
 }
 
 .navbar-logo img {
-    position: absolute;
-    left: 10px;
-    top: 0px;
-    height: 60px;
-    width: auto;
+
 }
 
 /* links */

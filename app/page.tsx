@@ -1,5 +1,4 @@
 import Navbar from "@/components/layout/Navbar";
-import StarBackground from "@/components/effects/StarBackground";
 
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
@@ -11,9 +10,7 @@ import CTA from "@/components/sections/CTA";
 
 export default function Home() {
     return (
-        <main className="text-white">
-
-            <StarBackground/>
+        <div className="text-white">
 
             <Navbar/>
 
@@ -31,6 +28,6 @@ export default function Home() {
 
             <CTA/>
 
-        </main>
+        </div>
     );
 }
