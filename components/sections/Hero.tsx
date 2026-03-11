@@ -11,9 +11,9 @@ export default function Hero() {
         "text-green-400 font-medium hover:underline"
 
     return (
-        <section className="relative flex flex-col items-center text-center section-hero">
+        <section className="relative flex flex-col text-center section-hero">
 
-            <div className="container-main flex flex-col items-center pt-0 pb-10 md:py-24 max-w-3xl px-4">
+            <div className="container-main flex flex-col pt-0 pb-10 md:py-24 max-w-3xl px-4">
                 {/* TITLE */}
 
                 <h1 className="relative text-4xl sm:text-5xl md:text-7xl font-semibold text-white mb-6 md:mb-8 whitespace-nowrap">

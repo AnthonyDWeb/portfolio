@@ -34,11 +34,14 @@
 @media (max-width: 768px) {
 
     .section {
-        padding-top: 80px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
     }
 
     .section-hero {
-        padding-top: 120px;
+        padding-top: 50px;
+
     }
 
 }

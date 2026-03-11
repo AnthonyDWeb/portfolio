@@ -7,13 +7,13 @@
 /* container */
 
 .navbar-container {
-    @apply w-[90%] max-w-[1300px] mx-auto flex justify-between items-center py-6;
+    @apply w-full flex justify-end items-center py-3 pr-5;
 }
 
 /* navigation links */
 
 .navbar-links {
-    @apply flex items-center gap-10;
+    @apply flex justify-end items-center gap-10 ml-auto mr-24 transition-all duration-800 w-full;
 }
 
 /* logo */
@@ -25,7 +25,7 @@
 .navbar-logo img {
     position: absolute;
     left: 10px;
-    top: 10px;
+    top: 0px;
     height: 60px;
     width: auto;
 }

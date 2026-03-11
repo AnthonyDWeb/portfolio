@@ -4,7 +4,7 @@ import FeatureCard from "../ui/FeatureCard"
 
 export default function Method() {
     return (
-        <section className="section">
+        <section id="method" className="section">
 
             <Container>
 
